@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
    * login
    */
   public login = () => {
-    console.log("btn cli");
     if (!this.email) {
       this.toastr.warningToastr('enter email');
     } else if (!this.password) {

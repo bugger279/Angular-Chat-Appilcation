@@ -50,13 +50,16 @@ export class AppService {
    * getUserInfoFromLocalStorage
    */
   public getUserInfoFromLocalStorage = () => {
-    return JSON.parse(localStorage.getItem('userInfo'));
+    // const userInfoData = JSON.parse(localStorage.getItem('userInfoData'));
+    // const userInfoDataCookie = this.cookie.getAll();
+    return JSON.parse(localStorage.getItem('userInfoData'));
+    // return userInfoDataCookie;
   }
 
   /**
    * setUserInfoLocalStorage
    */
-  public setUserInfoLocalStorage = (userInfoData) => {
-    localStorage.setItem(userInfoData, JSON.stringify(userInfoData));
+  public setUserInfoLocalStorage = (data) => {
+    localStorage.setItem('userInfoData', JSON.stringify(data));
   }
 }
